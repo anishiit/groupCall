@@ -19,7 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postinstall": "npm install --only=dev && npm install"
+    "postinstall": "if [ \"$NODE_ENV\" != \"production\" ]; then npm install --only=dev; fi"
     
   },
   "eslintConfig": {
